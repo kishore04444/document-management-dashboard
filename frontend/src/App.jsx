@@ -7,8 +7,7 @@ import NotificationCenter from './components/NotificationCenter';
 import { getDocuments } from './services/api';
 import { FileText, Bell } from 'lucide-react';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://document-backend.onrender.com';
-const socket = io(SOCKET_URL);
+const socket = io('https://document-management-dashboard.onrender.com');
 
 function App() {
   const [documents, setDocuments] = useState([]);
