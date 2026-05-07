@@ -1,8 +1,22 @@
-﻿node_modules/
-backend/uploads/
+﻿# Dependencies
+node_modules/
 backend/node_modules/
 frontend/node_modules/
+
+# Uploads and builds
+backend/uploads/
 frontend/dist/
+frontend/.vite/
+
+# Environment files
 .env
+.env.local
+
+# OS files
 .DS_Store
+Thumbs.db
 *.log
+
+# IDE
+.vscode/
+.idea/
