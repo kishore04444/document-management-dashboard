@@ -1,7 +1,7 @@
 ﻿import axios from 'axios';
 
-// REPLACE with your actual Render URL
-const API_BASE_URL = 'https://document-backend.onrender.com/api';
+// This will be updated after Render deployment
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://document-backend.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
