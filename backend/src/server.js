@@ -96,5 +96,5 @@ app.patch('/api/notifications/read-all', (req, res) => {
   res.json({ success: true });
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => console.log(`✅ Server on port ${PORT}`));
