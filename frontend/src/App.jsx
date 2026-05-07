@@ -7,7 +7,9 @@ import NotificationCenter from './components/NotificationCenter';
 import { getDocuments } from './services/api';
 import { FileText, Bell } from 'lucide-react';
 
-const socket = io('http://localhost:5000');
+// REPLACE with your actual Render URL
+const SOCKET_URL = 'https://document-backend.onrender.com';
+const socket = io(SOCKET_URL);
 
 function App() {
   const [documents, setDocuments] = useState([]);
@@ -27,7 +29,8 @@ function App() {
       }
     });
     
-    socket.on('uploadComplete', () => {
+    socket.on('uploadComplete', (data) => {
+      console.log('Upload complete:', data);
       loadDocuments();
     });
     
